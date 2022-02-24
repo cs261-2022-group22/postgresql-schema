@@ -3,6 +3,8 @@ name: Apply schema changes
 on:
   push:
     branches: [main]
+    paths:
+      - '**.sql'
 
   workflow_dispatch:
 
