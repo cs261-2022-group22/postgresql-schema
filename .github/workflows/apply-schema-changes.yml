@@ -1,0 +1,25 @@
+name: Apply schema changes
+
+on:
+  push:
+    branches: [main]
+
+  workflow_dispatch:
+
+jobs:
+  apply-changes:
+    runs-on: azure
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Show table structure
+        run: echo '\d' | psql -U cs261 mentoring
+
+      - name: Apply Schema Changes
+        run: |
+          psql -U cs261 mentoring < schema.sql
+          psql -U cs261 mentoring < reset-data.sql 
+          psql -U cs261 mentoring < put-data.sql
+
+      - name: Post show table structure
+        run: echo '\d' | psql -U cs261 mentoring
