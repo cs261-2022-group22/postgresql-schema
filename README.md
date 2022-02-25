@@ -8,7 +8,7 @@ Defines the tables and triggers relevant to the database. Before creating each t
 
 ## put-data.sql
 
-Inserts example data into the tables of the database. Can be utilised for testing
+Inserts example data into the tables of the database. Can be utilised for testing. For proper operation, it is assumed that no records currently exist in the database (i.e. within any table).
 
 ## delete-data.sql
 
