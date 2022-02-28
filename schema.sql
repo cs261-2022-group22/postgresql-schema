@@ -27,7 +27,7 @@ DROP TABLE IF EXISTS Account CASCADE;
 CREATE TABLE Account (
   accountId SERIAL PRIMARY KEY,
   name VARCHAR,
-  email UNIQUE VARCHAR,
+  email VARCHAR UNIQUE,
   passwordHash BYTEA,
   dob DATE,
   businessSectorId INTEGER REFERENCES BusinessSector(businessSectorId) ON DELETE CASCADE
