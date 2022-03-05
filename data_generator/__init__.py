@@ -32,50 +32,50 @@ class Account:
         self.dob = _dob
         self.email = _email
         self.password = GenerateHash(_password)
-        self.bsId = _businessSector.id
+        self.bs = _businessSector
         pass
 
     def __str__(self) -> str:
-        return f"INSERT INTO Account VALUES({self.id}, '{self.name}', '{self.email}', {self.password}, DATE '{self.dob}', {self.bsId});"
+        return f"INSERT INTO Account VALUES({self.id}, '{self.name}', '{self.email}', {self.password}, DATE '{self.dob}', {self.bs.id});"
 
 
 class Mentor:
     def __init__(self, _id: int, _account: Account) -> None:
         self.id = _id
-        self.accountId = _account.id
+        self.account = _account
         pass
 
     def __str__(self) -> str:
-        return f"INSERT INTO Mentor VALUES({self.id}, {self.accountId});"
+        return f"INSERT INTO Mentor VALUES({self.id}, {self.account.id});"
 
 
 class Mentee:
     def __init__(self, _id: int, _account: Account) -> None:
         self.id = _id
-        self.accountId = _account.id
+        self.account = _account
         pass
 
     def __str__(self) -> str:
-        return f"INSERT INTO Mentee VALUES({self.id}, {self.accountId});"
+        return f"INSERT INTO Mentee VALUES({self.id}, {self.account.id});"
 
 
 class MentorMessage:
     def __init__(self, _id: int, _mentor: Mentor,  _message: str) -> None:
         self.id = _id
-        self.menteeId = _mentor.id
+        self.mentee = _mentor
         self.message = _message
         pass
 
     def __str__(self) -> str:
-        return f"INSERT INTO MentorMessage VALUES({self.id}, {self.menteeId}, '{self.message}');"
+        return f"INSERT INTO MentorMessage VALUES({self.id}, {self.mentee.id}, '{self.message}');"
 
 
 class MenteeMessage:
     def __init__(self, _id: int, _mentee: Mentee,  _message: str) -> None:
         self.id = _id
-        self.menteeId = _mentee.id
+        self.mentee = _mentee
         self.message = _message
         pass
 
     def __str__(self) -> str:
-        return f"INSERT INTO MenteeMessage VALUES({self.id}, {self.menteeId}, '{self.message}');"
+        return f"INSERT INTO MenteeMessage VALUES({self.id}, {self.mentee.id}, '{self.message}');"
