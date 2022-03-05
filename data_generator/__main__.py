@@ -1,12 +1,11 @@
-import math
 import random
 from . import generator
 
 
-def PrintList(name, list):
+def PrintList(name, list, gen_comment=None):
     print("--", name)
     for e in list:
-        print(e)
+        print(e, "" if gen_comment is None else "-- " + gen_comment(e))
     print()
 
 
@@ -26,18 +25,18 @@ if __name__ == "__main__":
     # =========== MENTORS ===========
     mentor_accounts = random_accounts[:NUMBER_OF_MENTORS]
     Mentors = generator.GenerateMentors(mentor_accounts)
-    PrintList("Mentors", Mentors)
+    PrintList("Mentors", Mentors, lambda m: f"Account: {m.account.email}")
 
-    MentorMessagesCount = random.randrange(NUMBER_OF_MENTORS, 5 * NUMBER_OF_MENTORS)
+    MentorMessagesCount = random.randrange(NUMBER_OF_MENTORS, 4 * NUMBER_OF_MENTORS)
     MentorMessages = generator.GenerateMentorMessages(Mentors, MentorMessagesCount)
     PrintList("Mentor Messages", MentorMessages)
 
     # =========== MENTEES ===========
     mentee_accounts = random_accounts[NUMBER_OF_MENTORS:]
     Mentees = generator.GenerateMentees(mentee_accounts)
-    PrintList("Mentees", Mentees)
+    PrintList("Mentees", Mentees, lambda m: f"Account: {m.account.email}")
 
-    MenteeMessageCount = random.randrange(NUMBER_OF_MENTEES, 4 * NUMBER_OF_MENTEES)
+    MenteeMessageCount = random.randrange(NUMBER_OF_MENTEES, 3 * NUMBER_OF_MENTEES)
     MenteeMessages = generator.GenerateMenteeMessages(Mentees, MenteeMessageCount)
     PrintList("Mentee Messages", MenteeMessages)
 
