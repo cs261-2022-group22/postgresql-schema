@@ -2,7 +2,7 @@ import random
 from . import generator
 
 
-def PrintList(name, list, gen_comment=None):
+def GenerateSQLSection(name, list, gen_comment=None):
     print("--", name)
     for e in list:
         print(e, "" if gen_comment is None else "-- " + gen_comment(e))
@@ -14,10 +14,10 @@ if __name__ == "__main__":
     NUMBER_OF_MENTEES = 60
 
     BusinessSectors = generator.GenerateBusinessSectors()
-    PrintList("Business Sectors", BusinessSectors)
+    GenerateSQLSection("Business Sectors", BusinessSectors)
 
     Accounts = generator.GenerateAccounts(NUMBER_OF_MENTORS + NUMBER_OF_MENTEES, BusinessSectors)
-    PrintList("Accounts", Accounts)
+    GenerateSQLSection("Accounts", Accounts)
 
     random_accounts = Accounts.copy()
     random.shuffle(random_accounts)
@@ -25,19 +25,19 @@ if __name__ == "__main__":
     # =========== MENTORS ===========
     mentor_accounts = random_accounts[:NUMBER_OF_MENTORS]
     Mentors = generator.GenerateMentors(mentor_accounts)
-    PrintList("Mentors", Mentors, lambda m: f"Account: {m.account.email}")
+    GenerateSQLSection("Mentors", Mentors, lambda m: f"Account: {m.account.email}")
 
     MentorMessagesCount = random.randrange(NUMBER_OF_MENTORS, 4 * NUMBER_OF_MENTORS)
     MentorMessages = generator.GenerateMentorMessages(Mentors, MentorMessagesCount)
-    PrintList("Mentor Messages", MentorMessages)
+    GenerateSQLSection("Mentor Messages", MentorMessages)
 
     # =========== MENTEES ===========
     mentee_accounts = random_accounts[NUMBER_OF_MENTORS:]
     Mentees = generator.GenerateMentees(mentee_accounts)
-    PrintList("Mentees", Mentees, lambda m: f"Account: {m.account.email}")
+    GenerateSQLSection("Mentees", Mentees, lambda m: f"Account: {m.account.email}")
 
     MenteeMessageCount = random.randrange(NUMBER_OF_MENTEES, 3 * NUMBER_OF_MENTEES)
     MenteeMessages = generator.GenerateMenteeMessages(Mentees, MenteeMessageCount)
-    PrintList("Mentee Messages", MenteeMessages)
+    GenerateSQLSection("Mentee Messages", MenteeMessages)
 
     pass
