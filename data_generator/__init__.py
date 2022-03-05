@@ -9,12 +9,6 @@ def printe(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
 
 
-def GenerateHash(password: str):
-    passwordPlainBytes = password.encode("utf-8")
-    passwordHashBytes = bcrypt.hashpw(passwordPlainBytes, bcrypt.gensalt())
-    return "E'" + "\\\\x" + (passwordHashBytes.hex()) + "'"
-
-
 class BusinessSector:
     def __init__(self, _id, _name) -> None:
         self.id = _id
@@ -26,17 +20,17 @@ class BusinessSector:
 
 
 class Account:
-    def __init__(self, _id: int, _name: str, _dob: date, _email: str, _password: str, _businessSector: BusinessSector) -> None:
+    def __init__(self, _id: int, _name: str, _dob: date, _email: str, _passwordHash: str, _businessSector: BusinessSector) -> None:
         self.id = _id
         self.name = _name
         self.dob = _dob
         self.email = _email
-        self.password = GenerateHash(_password)
+        self.passwordHash = _passwordHash
         self.bs = _businessSector
         pass
 
     def __str__(self) -> str:
-        return f"INSERT INTO Account VALUES({self.id}, '{self.name}', '{self.email}', {self.password}, DATE '{self.dob}', {self.bs.id});"
+        return f"INSERT INTO Account VALUES({self.id}, '{self.name}', '{self.email}', {self.passwordHash}, DATE '{self.dob}', {self.bs.id});"
 
 
 class Mentor:

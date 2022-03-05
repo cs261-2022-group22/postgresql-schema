@@ -1,5 +1,6 @@
 import random
 from . import Account, BusinessSector, Mentee, MenteeMessage, Mentor, MentorMessage, printe
+from .compute_bytea_hash import ComputeByteaHash
 from faker import Faker
 
 FAKE = Faker()
@@ -36,12 +37,12 @@ def GenerateAccounts(count: int, businessSectors: list[BusinessSector]):
                           profile["name"],
                           FAKE.date_between(start_date='-40y', end_date='-18y'),
                           profile["mail"],  # Email
-                          profile["mail"],  # Password
+                          ComputeByteaHash(profile["mail"]),  # Password
                           random.choice(businessSectors))
         accounts.append(account)
 
-        if (i+1) % 10 == 0:
-            printe(f"  {i+1} out of {count} ...")
+        if i % 10 == 0:
+            printe(f"  {i} out of {count} ...")
 
     return accounts
 
