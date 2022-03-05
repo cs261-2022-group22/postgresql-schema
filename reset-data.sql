@@ -15,6 +15,8 @@ DELETE FROM MentorFeedback;
 DELETE FROM MenteeFeedback;
 DELETE FROM Milestone;
 DELETE FROM Workshop;
+DELETE FROM RatingModel;
+DELETE FROM PendingRatingFeedback;
 
 ALTER SEQUENCE skill_skillid_seq RESTART WITH 1;
 ALTER SEQUENCE businesssector_businesssectorid_seq RESTART WITH 1;

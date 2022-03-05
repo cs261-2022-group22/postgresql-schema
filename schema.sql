@@ -120,3 +120,23 @@ CREATE TABLE Workshop (
   duration INTEGER, /* in minutes */
   link VARCHAR
 );
+
+DROP TABLE IF EXISTS RatingModel CASCADE;
+CREATE TABLE RatingModel (
+    businessArea1Id INTEGER,
+    businessArea2Id INTEGER,
+    skillOverlapCoefficient DOUBLE PRECISION,
+    ageDifferenceCoefficient DOUBLE PRECISION,
+    modelOffset DOUBLE PRECISION,
+    CONSTRAINT businessAreaOrdering CHECK (businessarea1id < businessarea2id)
+);
+
+DROP TABLE IF EXISTS PendingRatingFeedback CASCADE;
+CREATE TABLE PendingRatingFeedback (
+    businessArea1Id INTEGER, 
+    businessArea2Id INTEGER, 
+    skillOverlap INTEGER, 
+    ageDifference INTEGER, 
+    rating DOUBLE PRECISION
+    CONSTRAINT businessAreaOrdering CHECK (businessarea1id < businessarea2id)
+);
