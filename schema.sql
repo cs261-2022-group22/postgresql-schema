@@ -137,6 +137,16 @@ CREATE TABLE PendingRatingFeedback (
     businessArea2Id INTEGER, 
     skillOverlap INTEGER, 
     ageDifference INTEGER, 
-    rating DOUBLE PRECISION
+    rating DOUBLE PRECISION, 
+    CONSTRAINT businessAreaOrdering CHECK (businessarea1id < businessarea2id)
+);
+
+DROP TABLE IF EXISTS PendingTextFeedback CASCADE;
+CREATE TABLE PendingTextFeedback (
+    businessArea1Id INTEGER, 
+    businessArea2Id INTEGER, 
+    skillOverlap INTEGER, 
+    ageDifference INTEGER, 
+    content VARCHAR, 
     CONSTRAINT businessAreaOrdering CHECK (businessarea1id < businessarea2id)
 );
