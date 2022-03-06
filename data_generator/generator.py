@@ -253,7 +253,7 @@ def GenerateWorkshop(skills: list[Skill], count: int, *, past: bool = True, futu
     for skill in selectedSkills:
         WORKSHOP_SEQ += 1
 
-        isFuture = random.choice([True, False])
+        isFuture = random.choice([future, not past])
 
         if isFuture:
             futureCount += 1
@@ -287,7 +287,7 @@ def GenerateMeetings(assignments: list[Assignment], count: int, *, past: bool = 
     for assignment in selectedAssignments:
         MEETING_SEQ += 1
 
-        isFuture = random.choice([True, False])
+        isFuture = random.choice([future, not past])
 
         if isFuture:
             futureCount += 1
