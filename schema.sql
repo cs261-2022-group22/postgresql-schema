@@ -116,9 +116,9 @@ DROP TABLE IF EXISTS Workshop CASCADE;
 CREATE TABLE Workshop (
   workshopId SERIAL PRIMARY KEY,
   skillId INTEGER REFERENCES Skill(skillId) ON DELETE CASCADE,
+  link VARCHAR,
   start TIMESTAMP,
-  duration INTEGER, /* in minutes */
-  link VARCHAR
+  duration INTEGER /* in minutes */
 );
 
 DROP TABLE IF EXISTS RatingModel CASCADE;
