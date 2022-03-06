@@ -4,7 +4,9 @@ on:
   push:
     branches: [main]
     paths:
-      - '**.sql'
+      - "put-data.sql"
+      - "reset-data.sql"
+      - "schema.sql"
 
   workflow_dispatch:
 
