@@ -94,7 +94,7 @@ class Workshop:
         pass
 
     def __str__(self) -> str:
-        return f"INSERT INTO Workshop VALUES({self.id}, {self.skill.id}, '{self.link}', {self.start}, {self.duration_minutes});"
+        return f"INSERT INTO Workshop VALUES({self.id}, {self.skill.id}, '{self.link}', '{self.start}', {self.duration_minutes});"
 
 
 class Assignment:
@@ -105,7 +105,7 @@ class Assignment:
         pass
 
     def __str__(self) -> str:
-        return f"INSERT INTO Assignment VALUES({self.id}, {self.mentor.id}, {self.mentee.id})"
+        return f"INSERT INTO Assignment VALUES({self.id}, {self.mentor.id}, {self.mentee.id});"
 
 
 class Meeting:
@@ -118,7 +118,7 @@ class Meeting:
         pass
 
     def __str__(self) -> str:
-        return f"INSERT INTO Meeting VALUES({self.id}, {self.assignment.id}, '{self.link}', {self.start}, {self.duration_minutes});"
+        return f"INSERT INTO Meeting VALUES({self.id}, {self.assignment.id}, '{self.link}', '{self.start}', {self.duration_minutes});"
 
 
 class MentorSkill:
@@ -128,7 +128,7 @@ class MentorSkill:
         self.skill = _skill
 
     def __str__(self) -> str:
-        return f"INSERT INTO MentorSkill VALUES({self.id}, {self.mentor.id}, {self.skill.id})"
+        return f"INSERT INTO MentorSkill VALUES({self.id}, {self.mentor.id}, {self.skill.id});"
 
 
 class MenteeSkill:
@@ -138,4 +138,4 @@ class MenteeSkill:
         self.skill = _skill
 
     def __str__(self) -> str:
-        return f"INSERT INTO MenteeSkill VALUES({self.id}, {self.mentee.id}, {self.skill.id})"
+        return f"INSERT INTO MenteeSkill VALUES({self.id}, {self.mentee.id}, {self.skill.id});"

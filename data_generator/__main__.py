@@ -1,6 +1,5 @@
 import random
-
-from faker import Faker
+from freezegun import freeze_time
 
 from . import Account, Assignment, Meeting, Mentee, MenteeMessage, MenteeSkill, Mentor, MentorMessage, MentorSkill, Workshop, generator as G
 
@@ -57,14 +56,15 @@ def comment_gen_meeting(w: Meeting):
 
 PURE_RANDOM = False
 
-if __name__ == "__main__":
+
+def main():
     G.Initialise(PURE_RANDOM)
 
     NUMBER_OF_MENTORS = 20
     NUMBER_OF_MENTEES = 60
     NUMBER_OF_SKILLS = 15
     NUMBER_OF_WORKSHOPS = 40
-    NUMBER_OF_MEETINGS = 90
+    NUMBER_OF_MEETINGS = 40
 
     BusinessSectors = G.GenerateBusinessSectors()
 
@@ -101,6 +101,14 @@ if __name__ == "__main__":
     # =========== Meetings ===========
     Meetings = G.GenerateMeetings(Assignments, NUMBER_OF_MEETINGS, past=True, future=True)
 
+    Mentees[0].account.passwordHash = R"E'\\x243262243132245159367569413552717a613166754f4b533478524c4f5041724a33645270774970376f334e703671324f44524c4859424256755632'"
+    Mentees[0].account.email = "test-mentee@gmail.com"
+    Mentees[0].account.name = "Test Mentee Account"
+
+    Mentors[0].account.passwordHash = R"E'\\x243262243132245159367569413552717a613166754f4b533478524c4f5041724a33645270774970376f334e703671324f44524c4859424256755632'"
+    Mentors[0].account.email = "test@gmail.com"
+    Mentors[0].account.name = "Test Mentor Account"
+
     GenerateSQLSection("Business Sectors", BusinessSectors)
     GenerateSQLSection("Accounts", Accounts, comment_gen_account_bs)
     GenerateSQLSection("Mentors", Mentors, comment_gen_mentor_account)
@@ -115,3 +123,8 @@ if __name__ == "__main__":
     GenerateSQLSection("Meetings", Meetings, comment_gen_meeting)
 
     pass
+
+
+if __name__ == "__main__":
+    with freeze_time("2022-03-06"):
+        main()
