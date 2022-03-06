@@ -719,3 +719,202 @@ INSERT INTO MenteeSkill VALUES(149, 60, 4) -- Skill 'Skill 4' for Mentee (Ashley
 INSERT INTO MenteeSkill VALUES(150, 60, 12) -- Skill 'Skill 12' for Mentee (Ashley Parker <garciaelizabeth@gmail.com>, 'Asset Management')
 
 
+-- Assignments
+INSERT INTO Assignment VALUES(1, 10, 41) -- Mentor (Jennifer Bauer <jack89@gmail.com>, 'Private Bank') <=> Mentee (Tammy Rose <rodriguezsamantha@hotmail.com>, 'Investment Bank')
+INSERT INTO Assignment VALUES(2, 10, 42) -- Mentor (Jennifer Bauer <jack89@gmail.com>, 'Private Bank') <=> Mentee (Cheryl Phillips <richard76@hotmail.com>, 'Corporate Bank')
+INSERT INTO Assignment VALUES(3, 10, 59) -- Mentor (Jennifer Bauer <jack89@gmail.com>, 'Private Bank') <=> Mentee (Caitlin Clayton <jessicaroberts@hotmail.com>, 'Investment Bank')
+INSERT INTO Assignment VALUES(4, 10, 27) -- Mentor (Jennifer Bauer <jack89@gmail.com>, 'Private Bank') <=> Mentee (Michelle Small <adamgonzalez@hotmail.com>, 'Investment Bank')
+INSERT INTO Assignment VALUES(5, 10, 22) -- Mentor (Jennifer Bauer <jack89@gmail.com>, 'Private Bank') <=> Mentee (Antonio Bishop <gloriaroberts@yahoo.com>, 'Investment Bank')
+INSERT INTO Assignment VALUES(6, 12, 30) -- Mentor (John Pham <hsmith@yahoo.com>, 'Asset Management') <=> Mentee (Amber Mann <mckeecolleen@gmail.com>, 'Investment Bank')
+INSERT INTO Assignment VALUES(7, 4, 23) -- Mentor (Brooke Martin <heatherwarner@hotmail.com>, 'Private Bank') <=> Mentee (Daniel Shepherd <ahill@gmail.com>, 'Investment Bank')
+INSERT INTO Assignment VALUES(8, 6, 29) -- Mentor (James Johnson <briansnyder@gmail.com>, 'Private Bank') <=> Mentee (Dylan Mora <loganhoffman@hotmail.com>, 'Asset Management')
+INSERT INTO Assignment VALUES(9, 2, 16) -- Mentor (Timothy Figueroa <johnsonmichaela@hotmail.com>, 'Investment Bank') <=> Mentee (Cheyenne Flores <mcfarlanddevin@yahoo.com>, 'Corporate Bank')
+INSERT INTO Assignment VALUES(10, 7, 19) -- Mentor (Stephanie Hicks <reidlauren@yahoo.com>, 'Private Bank') <=> Mentee (Melvin Huang <joneal@gmail.com>, 'Corporate Bank')
+INSERT INTO Assignment VALUES(11, 8, 20) -- Mentor (William Alvarado <hskinner@yahoo.com>, 'Private Bank') <=> Mentee (David Petty <jeffreyruiz@yahoo.com>, 'Private Bank')
+INSERT INTO Assignment VALUES(12, 4, 9) -- Mentor (Brooke Martin <heatherwarner@hotmail.com>, 'Private Bank') <=> Mentee (Timothy Sampson <tinamoon@gmail.com>, 'Asset Management')
+INSERT INTO Assignment VALUES(13, 14, 44) -- Mentor (Michael Martinez <wilsoncarolyn@hotmail.com>, 'Asset Management') <=> Mentee (Heidi Miller <aespinoza@gmail.com>, 'Corporate Bank')
+INSERT INTO Assignment VALUES(14, 5, 49) -- Mentor (Mary Brewer <lsims@yahoo.com>, 'Corporate Bank') <=> Mentee (Kathleen Hernandez <dawn90@hotmail.com>, 'Private Bank')
+INSERT INTO Assignment VALUES(15, 20, 45) -- Mentor (Jeremy Lopez <hannahgreen@hotmail.com>, 'Corporate Bank') <=> Mentee (Ashley Davis <tcantrell@hotmail.com>, 'Asset Management')
+INSERT INTO Assignment VALUES(16, 11, 53) -- Mentor (Kim Spears <johnphillips@gmail.com>, 'Corporate Bank') <=> Mentee (Katherine Molina <wzamora@gmail.com>, 'Private Bank')
+INSERT INTO Assignment VALUES(17, 17, 18) -- Mentor (David Vargas <smithsarah@yahoo.com>, 'Investment Bank') <=> Mentee (Anthony Black <rreyes@gmail.com>, 'Private Bank')
+INSERT INTO Assignment VALUES(18, 16, 35) -- Mentor (Patricia Reed <jessica97@hotmail.com>, 'Private Bank') <=> Mentee (Joshua Smith <johnstonderek@hotmail.com>, 'Private Bank')
+INSERT INTO Assignment VALUES(19, 6, 43) -- Mentor (James Johnson <briansnyder@gmail.com>, 'Private Bank') <=> Mentee (Tina Johnson <cindy80@hotmail.com>, 'Corporate Bank')
+INSERT INTO Assignment VALUES(20, 11, 8) -- Mentor (Kim Spears <johnphillips@gmail.com>, 'Corporate Bank') <=> Mentee (Kyle Wells <nealleslie@hotmail.com>, 'Corporate Bank')
+INSERT INTO Assignment VALUES(21, 9, 34) -- Mentor (Gabrielle Ferguson <hjones@gmail.com>, 'Corporate Bank') <=> Mentee (Mrs. Jacqueline Patel <jonathanturner@hotmail.com>, 'Private Bank')
+INSERT INTO Assignment VALUES(22, 17, 5) -- Mentor (David Vargas <smithsarah@yahoo.com>, 'Investment Bank') <=> Mentee (Adriana Cooper <arichardson@gmail.com>, 'Investment Bank')
+INSERT INTO Assignment VALUES(23, 1, 36) -- Mentor (Jean Dunlap <lindseyburnett@gmail.com>, 'Asset Management') <=> Mentee (Logan Garza <james03@gmail.com>, 'Corporate Bank')
+INSERT INTO Assignment VALUES(24, 14, 56) -- Mentor (Michael Martinez <wilsoncarolyn@hotmail.com>, 'Asset Management') <=> Mentee (Alexis Roberts <wilsonanthony@hotmail.com>, 'Corporate Bank')
+INSERT INTO Assignment VALUES(25, 11, 52) -- Mentor (Kim Spears <johnphillips@gmail.com>, 'Corporate Bank') <=> Mentee (Joshua Garcia <kbarr@gmail.com>, 'Corporate Bank')
+INSERT INTO Assignment VALUES(26, 6, 7) -- Mentor (James Johnson <briansnyder@gmail.com>, 'Private Bank') <=> Mentee (Justin Miller <rcohen@yahoo.com>, 'Corporate Bank')
+INSERT INTO Assignment VALUES(27, 20, 39) -- Mentor (Jeremy Lopez <hannahgreen@hotmail.com>, 'Corporate Bank') <=> Mentee (Michael Diaz <martinandrew@yahoo.com>, 'Investment Bank')
+INSERT INTO Assignment VALUES(28, 9, 11) -- Mentor (Gabrielle Ferguson <hjones@gmail.com>, 'Corporate Bank') <=> Mentee (Brad Wolf <amber61@hotmail.com>, 'Asset Management')
+INSERT INTO Assignment VALUES(29, 15, 37) -- Mentor (Alexis Monroe <alexanderfrances@yahoo.com>, 'Investment Bank') <=> Mentee (Arthur Good <rbrown@hotmail.com>, 'Asset Management')
+INSERT INTO Assignment VALUES(30, 1, 14) -- Mentor (Jean Dunlap <lindseyburnett@gmail.com>, 'Asset Management') <=> Mentee (James Jensen <danielle67@hotmail.com>, 'Investment Bank')
+INSERT INTO Assignment VALUES(31, 1, 2) -- Mentor (Jean Dunlap <lindseyburnett@gmail.com>, 'Asset Management') <=> Mentee (Cynthia Sanders <moorejoshua@gmail.com>, 'Asset Management')
+INSERT INTO Assignment VALUES(32, 2, 15) -- Mentor (Timothy Figueroa <johnsonmichaela@hotmail.com>, 'Investment Bank') <=> Mentee (Zoe Lane <coxbryan@yahoo.com>, 'Investment Bank')
+INSERT INTO Assignment VALUES(33, 11, 54) -- Mentor (Kim Spears <johnphillips@gmail.com>, 'Corporate Bank') <=> Mentee (Kathleen Wright <mccartythomas@gmail.com>, 'Investment Bank')
+INSERT INTO Assignment VALUES(34, 9, 12) -- Mentor (Gabrielle Ferguson <hjones@gmail.com>, 'Corporate Bank') <=> Mentee (Michaela Williams <elizabethmassey@yahoo.com>, 'Asset Management')
+INSERT INTO Assignment VALUES(35, 14, 1) -- Mentor (Michael Martinez <wilsoncarolyn@hotmail.com>, 'Asset Management') <=> Mentee (Jorge Hart <nicholas91@hotmail.com>, 'Investment Bank')
+INSERT INTO Assignment VALUES(36, 9, 57) -- Mentor (Gabrielle Ferguson <hjones@gmail.com>, 'Corporate Bank') <=> Mentee (John Fowler <hudsonjessica@gmail.com>, 'Corporate Bank')
+INSERT INTO Assignment VALUES(37, 16, 28) -- Mentor (Patricia Reed <jessica97@hotmail.com>, 'Private Bank') <=> Mentee (Carly Dorsey <collinlucas@hotmail.com>, 'Investment Bank')
+INSERT INTO Assignment VALUES(38, 11, 55) -- Mentor (Kim Spears <johnphillips@gmail.com>, 'Corporate Bank') <=> Mentee (William Schultz <hyork@yahoo.com>, 'Asset Management')
+INSERT INTO Assignment VALUES(39, 3, 51) -- Mentor (Richard Garcia <evelynhamilton@gmail.com>, 'Asset Management') <=> Mentee (Luis Williams <alexis83@hotmail.com>, 'Private Bank')
+INSERT INTO Assignment VALUES(40, 1, 47) -- Mentor (Jean Dunlap <lindseyburnett@gmail.com>, 'Asset Management') <=> Mentee (Patrick Grant <jmedina@gmail.com>, 'Asset Management')
+INSERT INTO Assignment VALUES(41, 17, 31) -- Mentor (David Vargas <smithsarah@yahoo.com>, 'Investment Bank') <=> Mentee (Brian Williamson <ofrank@gmail.com>, 'Investment Bank')
+INSERT INTO Assignment VALUES(42, 7, 24) -- Mentor (Stephanie Hicks <reidlauren@yahoo.com>, 'Private Bank') <=> Mentee (Charles Wise <mirandakim@gmail.com>, 'Private Bank')
+INSERT INTO Assignment VALUES(43, 14, 25) -- Mentor (Michael Martinez <wilsoncarolyn@hotmail.com>, 'Asset Management') <=> Mentee (Victor Baird <sanfordsteven@hotmail.com>, 'Asset Management')
+INSERT INTO Assignment VALUES(44, 8, 13) -- Mentor (William Alvarado <hskinner@yahoo.com>, 'Private Bank') <=> Mentee (Claire Bauer <pooleaaron@yahoo.com>, 'Investment Bank')
+INSERT INTO Assignment VALUES(45, 7, 26) -- Mentor (Stephanie Hicks <reidlauren@yahoo.com>, 'Private Bank') <=> Mentee (Jennifer Spears <hernandezerin@yahoo.com>, 'Asset Management')
+INSERT INTO Assignment VALUES(46, 7, 32) -- Mentor (Stephanie Hicks <reidlauren@yahoo.com>, 'Private Bank') <=> Mentee (Kristin Barajas <corey85@hotmail.com>, 'Private Bank')
+INSERT INTO Assignment VALUES(47, 13, 17) -- Mentor (Cole White <gregory56@gmail.com>, 'Private Bank') <=> Mentee (Michael Moreno <emily46@gmail.com>, 'Investment Bank')
+INSERT INTO Assignment VALUES(48, 19, 21) -- Mentor (Jerry Baker <campbelllisa@gmail.com>, 'Asset Management') <=> Mentee (Samuel Howell <qross@hotmail.com>, 'Investment Bank')
+INSERT INTO Assignment VALUES(49, 13, 60) -- Mentor (Cole White <gregory56@gmail.com>, 'Private Bank') <=> Mentee (Ashley Parker <garciaelizabeth@gmail.com>, 'Asset Management')
+INSERT INTO Assignment VALUES(50, 20, 48) -- Mentor (Jeremy Lopez <hannahgreen@hotmail.com>, 'Corporate Bank') <=> Mentee (Linda Patterson <harrisamy@yahoo.com>, 'Investment Bank')
+INSERT INTO Assignment VALUES(51, 9, 4) -- Mentor (Gabrielle Ferguson <hjones@gmail.com>, 'Corporate Bank') <=> Mentee (Julie Garcia <zsullivan@gmail.com>, 'Private Bank')
+INSERT INTO Assignment VALUES(52, 12, 38) -- Mentor (John Pham <hsmith@yahoo.com>, 'Asset Management') <=> Mentee (Nicholas Larson <zacharydavis@hotmail.com>, 'Private Bank')
+INSERT INTO Assignment VALUES(53, 20, 50) -- Mentor (Jeremy Lopez <hannahgreen@hotmail.com>, 'Corporate Bank') <=> Mentee (Emma Wright <cdaniel@gmail.com>, 'Corporate Bank')
+INSERT INTO Assignment VALUES(54, 7, 33) -- Mentor (Stephanie Hicks <reidlauren@yahoo.com>, 'Private Bank') <=> Mentee (Samantha Hart <dbryant@hotmail.com>, 'Investment Bank')
+INSERT INTO Assignment VALUES(55, 5, 46) -- Mentor (Mary Brewer <lsims@yahoo.com>, 'Corporate Bank') <=> Mentee (Stephanie Warren <patriciadunn@yahoo.com>, 'Investment Bank')
+INSERT INTO Assignment VALUES(56, 12, 58) -- Mentor (John Pham <hsmith@yahoo.com>, 'Asset Management') <=> Mentee (Melinda Smith <stephaniesullivan@gmail.com>, 'Asset Management')
+INSERT INTO Assignment VALUES(57, 5, 3) -- Mentor (Mary Brewer <lsims@yahoo.com>, 'Corporate Bank') <=> Mentee (Valerie Crosby <nrobles@yahoo.com>, 'Investment Bank')
+INSERT INTO Assignment VALUES(58, 18, 40) -- Mentor (Kelly Malone <adamsbrandi@hotmail.com>, 'Private Bank') <=> Mentee (Caleb Schwartz <elizabethbowman@hotmail.com>, 'Private Bank')
+INSERT INTO Assignment VALUES(59, 14, 10) -- Mentor (Michael Martinez <wilsoncarolyn@hotmail.com>, 'Asset Management') <=> Mentee (Sherri White <jamesbrooks@gmail.com>, 'Investment Bank')
+INSERT INTO Assignment VALUES(60, 16, 6) -- Mentor (Patricia Reed <jessica97@hotmail.com>, 'Private Bank') <=> Mentee (Anthony Jones <powelllindsey@gmail.com>, 'Corporate Bank')
+
+
+-- Workshops
+INSERT INTO Workshop VALUES(1, 8, 'https://example.com/Workshop_1', 2022-02-11 06:23:23, 30); -- For skill 'Skill 8'
+INSERT INTO Workshop VALUES(2, 0, 'https://example.com/Workshop_2', 2022-03-10 01:24:01, 120); -- For skill 'Skill 0'
+INSERT INTO Workshop VALUES(3, 5, 'https://example.com/Workshop_3', 2022-02-06 01:10:59, 45); -- For skill 'Skill 5'
+INSERT INTO Workshop VALUES(4, 7, 'https://example.com/Workshop_4', 2022-03-09 22:23:29, 120); -- For skill 'Skill 7'
+INSERT INTO Workshop VALUES(5, 6, 'https://example.com/Workshop_5', 2022-03-17 14:28:16, 150); -- For skill 'Skill 6'
+INSERT INTO Workshop VALUES(6, 14, 'https://example.com/Workshop_6', 2022-02-12 14:08:51, 30); -- For skill 'Skill 14'
+INSERT INTO Workshop VALUES(7, 4, 'https://example.com/Workshop_7', 2022-03-14 09:46:34, 60); -- For skill 'Skill 4'
+INSERT INTO Workshop VALUES(8, 0, 'https://example.com/Workshop_8', 2022-03-23 14:36:52, 15); -- For skill 'Skill 0'
+INSERT INTO Workshop VALUES(9, 3, 'https://example.com/Workshop_9', 2022-02-18 01:41:27, 60); -- For skill 'Skill 3'
+INSERT INTO Workshop VALUES(10, 8, 'https://example.com/Workshop_10', 2022-03-05 20:03:58, 90); -- For skill 'Skill 8'
+INSERT INTO Workshop VALUES(11, 8, 'https://example.com/Workshop_11', 2022-04-05 13:55:52, 90); -- For skill 'Skill 8'
+INSERT INTO Workshop VALUES(12, 4, 'https://example.com/Workshop_12', 2022-02-16 13:52:24, 60); -- For skill 'Skill 4'
+INSERT INTO Workshop VALUES(13, 7, 'https://example.com/Workshop_13', 2022-03-06 20:26:54, 60); -- For skill 'Skill 7'
+INSERT INTO Workshop VALUES(14, 2, 'https://example.com/Workshop_14', 2022-03-20 11:47:05, 30); -- For skill 'Skill 2'
+INSERT INTO Workshop VALUES(15, 3, 'https://example.com/Workshop_15', 2022-03-02 21:57:20, 20); -- For skill 'Skill 3'
+INSERT INTO Workshop VALUES(16, 2, 'https://example.com/Workshop_16', 2022-04-04 07:21:36, 20); -- For skill 'Skill 2'
+INSERT INTO Workshop VALUES(17, 9, 'https://example.com/Workshop_17', 2022-03-01 18:30:43, 80); -- For skill 'Skill 9'
+INSERT INTO Workshop VALUES(18, 1, 'https://example.com/Workshop_18', 2022-03-14 16:45:52, 45); -- For skill 'Skill 1'
+INSERT INTO Workshop VALUES(19, 3, 'https://example.com/Workshop_19', 2022-02-12 05:51:24, 15); -- For skill 'Skill 3'
+INSERT INTO Workshop VALUES(20, 7, 'https://example.com/Workshop_20', 2022-03-08 14:34:43, 15); -- For skill 'Skill 7'
+INSERT INTO Workshop VALUES(21, 0, 'https://example.com/Workshop_21', 2022-03-23 18:02:10, 120); -- For skill 'Skill 0'
+INSERT INTO Workshop VALUES(22, 3, 'https://example.com/Workshop_22', 2022-02-11 01:59:53, 45); -- For skill 'Skill 3'
+INSERT INTO Workshop VALUES(23, 7, 'https://example.com/Workshop_23', 2022-02-11 16:32:43, 30); -- For skill 'Skill 7'
+INSERT INTO Workshop VALUES(24, 6, 'https://example.com/Workshop_24', 2022-03-20 13:12:53, 45); -- For skill 'Skill 6'
+INSERT INTO Workshop VALUES(25, 5, 'https://example.com/Workshop_25', 2022-02-20 18:51:33, 45); -- For skill 'Skill 5'
+INSERT INTO Workshop VALUES(26, 8, 'https://example.com/Workshop_26', 2022-03-11 08:23:25, 150); -- For skill 'Skill 8'
+INSERT INTO Workshop VALUES(27, 7, 'https://example.com/Workshop_27', 2022-04-05 15:20:27, 45); -- For skill 'Skill 7'
+INSERT INTO Workshop VALUES(28, 11, 'https://example.com/Workshop_28', 2022-02-24 09:03:25, 20); -- For skill 'Skill 11'
+INSERT INTO Workshop VALUES(29, 14, 'https://example.com/Workshop_29', 2022-03-10 17:11:17, 150); -- For skill 'Skill 14'
+INSERT INTO Workshop VALUES(30, 3, 'https://example.com/Workshop_30', 2022-03-01 02:17:09, 150); -- For skill 'Skill 3'
+INSERT INTO Workshop VALUES(31, 14, 'https://example.com/Workshop_31', 2022-03-16 19:58:15, 45); -- For skill 'Skill 14'
+INSERT INTO Workshop VALUES(32, 9, 'https://example.com/Workshop_32', 2022-03-14 05:32:16, 150); -- For skill 'Skill 9'
+INSERT INTO Workshop VALUES(33, 6, 'https://example.com/Workshop_33', 2022-03-31 11:51:07, 30); -- For skill 'Skill 6'
+INSERT INTO Workshop VALUES(34, 13, 'https://example.com/Workshop_34', 2022-03-08 20:25:25, 150); -- For skill 'Skill 13'
+INSERT INTO Workshop VALUES(35, 4, 'https://example.com/Workshop_35', 2022-03-08 05:42:57, 120); -- For skill 'Skill 4'
+INSERT INTO Workshop VALUES(36, 13, 'https://example.com/Workshop_36', 2022-03-11 07:35:04, 15); -- For skill 'Skill 13'
+INSERT INTO Workshop VALUES(37, 11, 'https://example.com/Workshop_37', 2022-03-30 04:36:28, 60); -- For skill 'Skill 11'
+INSERT INTO Workshop VALUES(38, 4, 'https://example.com/Workshop_38', 2022-03-20 23:18:51, 15); -- For skill 'Skill 4'
+INSERT INTO Workshop VALUES(39, 3, 'https://example.com/Workshop_39', 2022-02-11 02:06:05, 30); -- For skill 'Skill 3'
+INSERT INTO Workshop VALUES(40, 5, 'https://example.com/Workshop_40', 2022-02-22 11:23:00, 120); -- For skill 'Skill 5'
+
+
+-- Meetings
+INSERT INTO Meeting VALUES(1, 22, 'https://example.com/Meeting_1', 2022-02-26 16:40:03, 15); -- Mentor (David Vargas <smithsarah@yahoo.com>, 'Investment Bank') <=> Mentee (Adriana Cooper <arichardson@gmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(2, 59, 'https://example.com/Meeting_2', 2022-02-27 05:38:12, 30); -- Mentor (Michael Martinez <wilsoncarolyn@hotmail.com>, 'Asset Management') <=> Mentee (Sherri White <jamesbrooks@gmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(3, 46, 'https://example.com/Meeting_3', 2022-03-18 17:06:44, 30); -- Mentor (Stephanie Hicks <reidlauren@yahoo.com>, 'Private Bank') <=> Mentee (Kristin Barajas <corey85@hotmail.com>, 'Private Bank')
+INSERT INTO Meeting VALUES(4, 47, 'https://example.com/Meeting_4', 2022-03-07 11:47:25, 150); -- Mentor (Cole White <gregory56@gmail.com>, 'Private Bank') <=> Mentee (Michael Moreno <emily46@gmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(5, 9, 'https://example.com/Meeting_5', 2022-02-12 19:25:08, 30); -- Mentor (Timothy Figueroa <johnsonmichaela@hotmail.com>, 'Investment Bank') <=> Mentee (Cheyenne Flores <mcfarlanddevin@yahoo.com>, 'Corporate Bank')
+INSERT INTO Meeting VALUES(6, 6, 'https://example.com/Meeting_6', 2022-02-19 12:03:01, 45); -- Mentor (John Pham <hsmith@yahoo.com>, 'Asset Management') <=> Mentee (Amber Mann <mckeecolleen@gmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(7, 2, 'https://example.com/Meeting_7', 2022-03-19 20:12:29, 15); -- Mentor (Jennifer Bauer <jack89@gmail.com>, 'Private Bank') <=> Mentee (Cheryl Phillips <richard76@hotmail.com>, 'Corporate Bank')
+INSERT INTO Meeting VALUES(8, 33, 'https://example.com/Meeting_8', 2022-03-08 11:09:38, 80); -- Mentor (Kim Spears <johnphillips@gmail.com>, 'Corporate Bank') <=> Mentee (Kathleen Wright <mccartythomas@gmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(9, 33, 'https://example.com/Meeting_9', 2022-03-09 20:52:14, 30); -- Mentor (Kim Spears <johnphillips@gmail.com>, 'Corporate Bank') <=> Mentee (Kathleen Wright <mccartythomas@gmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(10, 57, 'https://example.com/Meeting_10', 2022-03-13 23:30:42, 120); -- Mentor (Mary Brewer <lsims@yahoo.com>, 'Corporate Bank') <=> Mentee (Valerie Crosby <nrobles@yahoo.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(11, 21, 'https://example.com/Meeting_11', 2022-03-14 05:57:27, 120); -- Mentor (Gabrielle Ferguson <hjones@gmail.com>, 'Corporate Bank') <=> Mentee (Mrs. Jacqueline Patel <jonathanturner@hotmail.com>, 'Private Bank')
+INSERT INTO Meeting VALUES(12, 11, 'https://example.com/Meeting_12', 2022-03-20 20:13:56, 80); -- Mentor (William Alvarado <hskinner@yahoo.com>, 'Private Bank') <=> Mentee (David Petty <jeffreyruiz@yahoo.com>, 'Private Bank')
+INSERT INTO Meeting VALUES(13, 9, 'https://example.com/Meeting_13', 2022-04-01 00:51:41, 45); -- Mentor (Timothy Figueroa <johnsonmichaela@hotmail.com>, 'Investment Bank') <=> Mentee (Cheyenne Flores <mcfarlanddevin@yahoo.com>, 'Corporate Bank')
+INSERT INTO Meeting VALUES(14, 5, 'https://example.com/Meeting_14', 2022-02-27 07:49:19, 20); -- Mentor (Jennifer Bauer <jack89@gmail.com>, 'Private Bank') <=> Mentee (Antonio Bishop <gloriaroberts@yahoo.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(15, 41, 'https://example.com/Meeting_15', 2022-02-20 07:13:11, 45); -- Mentor (David Vargas <smithsarah@yahoo.com>, 'Investment Bank') <=> Mentee (Brian Williamson <ofrank@gmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(16, 40, 'https://example.com/Meeting_16', 2022-03-31 10:41:01, 15); -- Mentor (Jean Dunlap <lindseyburnett@gmail.com>, 'Asset Management') <=> Mentee (Patrick Grant <jmedina@gmail.com>, 'Asset Management')
+INSERT INTO Meeting VALUES(17, 15, 'https://example.com/Meeting_17', 2022-03-13 15:49:53, 30); -- Mentor (Jeremy Lopez <hannahgreen@hotmail.com>, 'Corporate Bank') <=> Mentee (Ashley Davis <tcantrell@hotmail.com>, 'Asset Management')
+INSERT INTO Meeting VALUES(18, 37, 'https://example.com/Meeting_18', 2022-02-08 00:38:01, 120); -- Mentor (Patricia Reed <jessica97@hotmail.com>, 'Private Bank') <=> Mentee (Carly Dorsey <collinlucas@hotmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(19, 36, 'https://example.com/Meeting_19', 2022-02-22 02:17:14, 15); -- Mentor (Gabrielle Ferguson <hjones@gmail.com>, 'Corporate Bank') <=> Mentee (John Fowler <hudsonjessica@gmail.com>, 'Corporate Bank')
+INSERT INTO Meeting VALUES(20, 51, 'https://example.com/Meeting_20', 2022-04-03 14:34:37, 120); -- Mentor (Gabrielle Ferguson <hjones@gmail.com>, 'Corporate Bank') <=> Mentee (Julie Garcia <zsullivan@gmail.com>, 'Private Bank')
+INSERT INTO Meeting VALUES(21, 27, 'https://example.com/Meeting_21', 2022-02-06 11:30:09, 120); -- Mentor (Jeremy Lopez <hannahgreen@hotmail.com>, 'Corporate Bank') <=> Mentee (Michael Diaz <martinandrew@yahoo.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(22, 60, 'https://example.com/Meeting_22', 2022-03-18 23:58:08, 80); -- Mentor (Patricia Reed <jessica97@hotmail.com>, 'Private Bank') <=> Mentee (Anthony Jones <powelllindsey@gmail.com>, 'Corporate Bank')
+INSERT INTO Meeting VALUES(23, 30, 'https://example.com/Meeting_23', 2022-03-07 05:24:52, 45); -- Mentor (Jean Dunlap <lindseyburnett@gmail.com>, 'Asset Management') <=> Mentee (James Jensen <danielle67@hotmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(24, 47, 'https://example.com/Meeting_24', 2022-02-21 05:16:02, 30); -- Mentor (Cole White <gregory56@gmail.com>, 'Private Bank') <=> Mentee (Michael Moreno <emily46@gmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(25, 43, 'https://example.com/Meeting_25', 2022-03-26 04:13:44, 120); -- Mentor (Michael Martinez <wilsoncarolyn@hotmail.com>, 'Asset Management') <=> Mentee (Victor Baird <sanfordsteven@hotmail.com>, 'Asset Management')
+INSERT INTO Meeting VALUES(26, 13, 'https://example.com/Meeting_26', 2022-03-12 18:39:41, 80); -- Mentor (Michael Martinez <wilsoncarolyn@hotmail.com>, 'Asset Management') <=> Mentee (Heidi Miller <aespinoza@gmail.com>, 'Corporate Bank')
+INSERT INTO Meeting VALUES(27, 43, 'https://example.com/Meeting_27', 2022-03-04 13:38:31, 120); -- Mentor (Michael Martinez <wilsoncarolyn@hotmail.com>, 'Asset Management') <=> Mentee (Victor Baird <sanfordsteven@hotmail.com>, 'Asset Management')
+INSERT INTO Meeting VALUES(28, 48, 'https://example.com/Meeting_28', 2022-02-28 02:31:04, 120); -- Mentor (Jerry Baker <campbelllisa@gmail.com>, 'Asset Management') <=> Mentee (Samuel Howell <qross@hotmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(29, 42, 'https://example.com/Meeting_29', 2022-02-28 09:19:51, 120); -- Mentor (Stephanie Hicks <reidlauren@yahoo.com>, 'Private Bank') <=> Mentee (Charles Wise <mirandakim@gmail.com>, 'Private Bank')
+INSERT INTO Meeting VALUES(30, 47, 'https://example.com/Meeting_30', 2022-02-18 21:28:33, 80); -- Mentor (Cole White <gregory56@gmail.com>, 'Private Bank') <=> Mentee (Michael Moreno <emily46@gmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(31, 35, 'https://example.com/Meeting_31', 2022-02-14 18:53:44, 150); -- Mentor (Michael Martinez <wilsoncarolyn@hotmail.com>, 'Asset Management') <=> Mentee (Jorge Hart <nicholas91@hotmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(32, 35, 'https://example.com/Meeting_32', 2022-02-24 13:54:47, 90); -- Mentor (Michael Martinez <wilsoncarolyn@hotmail.com>, 'Asset Management') <=> Mentee (Jorge Hart <nicholas91@hotmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(33, 11, 'https://example.com/Meeting_33', 2022-03-03 14:50:24, 45); -- Mentor (William Alvarado <hskinner@yahoo.com>, 'Private Bank') <=> Mentee (David Petty <jeffreyruiz@yahoo.com>, 'Private Bank')
+INSERT INTO Meeting VALUES(34, 54, 'https://example.com/Meeting_34', 2022-03-16 06:56:31, 150); -- Mentor (Stephanie Hicks <reidlauren@yahoo.com>, 'Private Bank') <=> Mentee (Samantha Hart <dbryant@hotmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(35, 10, 'https://example.com/Meeting_35', 2022-02-21 15:33:26, 45); -- Mentor (Stephanie Hicks <reidlauren@yahoo.com>, 'Private Bank') <=> Mentee (Melvin Huang <joneal@gmail.com>, 'Corporate Bank')
+INSERT INTO Meeting VALUES(36, 38, 'https://example.com/Meeting_36', 2022-03-28 22:03:15, 30); -- Mentor (Kim Spears <johnphillips@gmail.com>, 'Corporate Bank') <=> Mentee (William Schultz <hyork@yahoo.com>, 'Asset Management')
+INSERT INTO Meeting VALUES(37, 15, 'https://example.com/Meeting_37', 2022-03-19 02:13:25, 120); -- Mentor (Jeremy Lopez <hannahgreen@hotmail.com>, 'Corporate Bank') <=> Mentee (Ashley Davis <tcantrell@hotmail.com>, 'Asset Management')
+INSERT INTO Meeting VALUES(38, 17, 'https://example.com/Meeting_38', 2022-03-22 11:59:54, 60); -- Mentor (David Vargas <smithsarah@yahoo.com>, 'Investment Bank') <=> Mentee (Anthony Black <rreyes@gmail.com>, 'Private Bank')
+INSERT INTO Meeting VALUES(39, 16, 'https://example.com/Meeting_39', 2022-04-04 23:04:26, 15); -- Mentor (Kim Spears <johnphillips@gmail.com>, 'Corporate Bank') <=> Mentee (Katherine Molina <wzamora@gmail.com>, 'Private Bank')
+INSERT INTO Meeting VALUES(40, 48, 'https://example.com/Meeting_40', 2022-04-03 16:37:44, 30); -- Mentor (Jerry Baker <campbelllisa@gmail.com>, 'Asset Management') <=> Mentee (Samuel Howell <qross@hotmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(41, 53, 'https://example.com/Meeting_41', 2022-03-18 23:47:05, 15); -- Mentor (Jeremy Lopez <hannahgreen@hotmail.com>, 'Corporate Bank') <=> Mentee (Emma Wright <cdaniel@gmail.com>, 'Corporate Bank')
+INSERT INTO Meeting VALUES(42, 55, 'https://example.com/Meeting_42', 2022-02-19 07:17:42, 120); -- Mentor (Mary Brewer <lsims@yahoo.com>, 'Corporate Bank') <=> Mentee (Stephanie Warren <patriciadunn@yahoo.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(43, 40, 'https://example.com/Meeting_43', 2022-03-30 11:10:36, 90); -- Mentor (Jean Dunlap <lindseyburnett@gmail.com>, 'Asset Management') <=> Mentee (Patrick Grant <jmedina@gmail.com>, 'Asset Management')
+INSERT INTO Meeting VALUES(44, 17, 'https://example.com/Meeting_44', 2022-02-13 18:43:10, 90); -- Mentor (David Vargas <smithsarah@yahoo.com>, 'Investment Bank') <=> Mentee (Anthony Black <rreyes@gmail.com>, 'Private Bank')
+INSERT INTO Meeting VALUES(45, 55, 'https://example.com/Meeting_45', 2022-02-16 05:19:22, 90); -- Mentor (Mary Brewer <lsims@yahoo.com>, 'Corporate Bank') <=> Mentee (Stephanie Warren <patriciadunn@yahoo.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(46, 41, 'https://example.com/Meeting_46', 2022-03-28 00:03:19, 30); -- Mentor (David Vargas <smithsarah@yahoo.com>, 'Investment Bank') <=> Mentee (Brian Williamson <ofrank@gmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(47, 46, 'https://example.com/Meeting_47', 2022-04-03 05:36:05, 120); -- Mentor (Stephanie Hicks <reidlauren@yahoo.com>, 'Private Bank') <=> Mentee (Kristin Barajas <corey85@hotmail.com>, 'Private Bank')
+INSERT INTO Meeting VALUES(48, 25, 'https://example.com/Meeting_48', 2022-04-05 19:32:33, 45); -- Mentor (Kim Spears <johnphillips@gmail.com>, 'Corporate Bank') <=> Mentee (Joshua Garcia <kbarr@gmail.com>, 'Corporate Bank')
+INSERT INTO Meeting VALUES(49, 9, 'https://example.com/Meeting_49', 2022-03-04 12:14:17, 60); -- Mentor (Timothy Figueroa <johnsonmichaela@hotmail.com>, 'Investment Bank') <=> Mentee (Cheyenne Flores <mcfarlanddevin@yahoo.com>, 'Corporate Bank')
+INSERT INTO Meeting VALUES(50, 14, 'https://example.com/Meeting_50', 2022-03-12 20:38:05, 15); -- Mentor (Mary Brewer <lsims@yahoo.com>, 'Corporate Bank') <=> Mentee (Kathleen Hernandez <dawn90@hotmail.com>, 'Private Bank')
+INSERT INTO Meeting VALUES(51, 40, 'https://example.com/Meeting_51', 2022-02-20 08:17:31, 45); -- Mentor (Jean Dunlap <lindseyburnett@gmail.com>, 'Asset Management') <=> Mentee (Patrick Grant <jmedina@gmail.com>, 'Asset Management')
+INSERT INTO Meeting VALUES(52, 4, 'https://example.com/Meeting_52', 2022-03-06 19:35:43, 45); -- Mentor (Jennifer Bauer <jack89@gmail.com>, 'Private Bank') <=> Mentee (Michelle Small <adamgonzalez@hotmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(53, 36, 'https://example.com/Meeting_53', 2022-03-24 12:07:35, 45); -- Mentor (Gabrielle Ferguson <hjones@gmail.com>, 'Corporate Bank') <=> Mentee (John Fowler <hudsonjessica@gmail.com>, 'Corporate Bank')
+INSERT INTO Meeting VALUES(54, 26, 'https://example.com/Meeting_54', 2022-03-25 21:56:47, 20); -- Mentor (James Johnson <briansnyder@gmail.com>, 'Private Bank') <=> Mentee (Justin Miller <rcohen@yahoo.com>, 'Corporate Bank')
+INSERT INTO Meeting VALUES(55, 46, 'https://example.com/Meeting_55', 2022-03-20 08:48:44, 150); -- Mentor (Stephanie Hicks <reidlauren@yahoo.com>, 'Private Bank') <=> Mentee (Kristin Barajas <corey85@hotmail.com>, 'Private Bank')
+INSERT INTO Meeting VALUES(56, 38, 'https://example.com/Meeting_56', 2022-03-29 14:09:47, 20); -- Mentor (Kim Spears <johnphillips@gmail.com>, 'Corporate Bank') <=> Mentee (William Schultz <hyork@yahoo.com>, 'Asset Management')
+INSERT INTO Meeting VALUES(57, 7, 'https://example.com/Meeting_57', 2022-02-20 18:59:51, 15); -- Mentor (Brooke Martin <heatherwarner@hotmail.com>, 'Private Bank') <=> Mentee (Daniel Shepherd <ahill@gmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(58, 18, 'https://example.com/Meeting_58', 2022-02-24 18:42:03, 80); -- Mentor (Patricia Reed <jessica97@hotmail.com>, 'Private Bank') <=> Mentee (Joshua Smith <johnstonderek@hotmail.com>, 'Private Bank')
+INSERT INTO Meeting VALUES(59, 5, 'https://example.com/Meeting_59', 2022-04-04 02:53:44, 80); -- Mentor (Jennifer Bauer <jack89@gmail.com>, 'Private Bank') <=> Mentee (Antonio Bishop <gloriaroberts@yahoo.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(60, 33, 'https://example.com/Meeting_60', 2022-03-14 19:32:03, 30); -- Mentor (Kim Spears <johnphillips@gmail.com>, 'Corporate Bank') <=> Mentee (Kathleen Wright <mccartythomas@gmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(61, 15, 'https://example.com/Meeting_61', 2022-03-01 13:57:48, 80); -- Mentor (Jeremy Lopez <hannahgreen@hotmail.com>, 'Corporate Bank') <=> Mentee (Ashley Davis <tcantrell@hotmail.com>, 'Asset Management')
+INSERT INTO Meeting VALUES(62, 53, 'https://example.com/Meeting_62', 2022-02-16 10:01:12, 20); -- Mentor (Jeremy Lopez <hannahgreen@hotmail.com>, 'Corporate Bank') <=> Mentee (Emma Wright <cdaniel@gmail.com>, 'Corporate Bank')
+INSERT INTO Meeting VALUES(63, 20, 'https://example.com/Meeting_63', 2022-03-02 01:47:55, 90); -- Mentor (Kim Spears <johnphillips@gmail.com>, 'Corporate Bank') <=> Mentee (Kyle Wells <nealleslie@hotmail.com>, 'Corporate Bank')
+INSERT INTO Meeting VALUES(64, 32, 'https://example.com/Meeting_64', 2022-02-20 21:10:42, 150); -- Mentor (Timothy Figueroa <johnsonmichaela@hotmail.com>, 'Investment Bank') <=> Mentee (Zoe Lane <coxbryan@yahoo.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(65, 40, 'https://example.com/Meeting_65', 2022-02-09 08:14:58, 90); -- Mentor (Jean Dunlap <lindseyburnett@gmail.com>, 'Asset Management') <=> Mentee (Patrick Grant <jmedina@gmail.com>, 'Asset Management')
+INSERT INTO Meeting VALUES(66, 37, 'https://example.com/Meeting_66', 2022-03-21 07:47:19, 90); -- Mentor (Patricia Reed <jessica97@hotmail.com>, 'Private Bank') <=> Mentee (Carly Dorsey <collinlucas@hotmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(67, 33, 'https://example.com/Meeting_67', 2022-03-20 06:35:57, 120); -- Mentor (Kim Spears <johnphillips@gmail.com>, 'Corporate Bank') <=> Mentee (Kathleen Wright <mccartythomas@gmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(68, 49, 'https://example.com/Meeting_68', 2022-03-03 07:59:02, 80); -- Mentor (Cole White <gregory56@gmail.com>, 'Private Bank') <=> Mentee (Ashley Parker <garciaelizabeth@gmail.com>, 'Asset Management')
+INSERT INTO Meeting VALUES(69, 11, 'https://example.com/Meeting_69', 2022-02-27 12:57:28, 30); -- Mentor (William Alvarado <hskinner@yahoo.com>, 'Private Bank') <=> Mentee (David Petty <jeffreyruiz@yahoo.com>, 'Private Bank')
+INSERT INTO Meeting VALUES(70, 23, 'https://example.com/Meeting_70', 2022-02-20 23:48:43, 30); -- Mentor (Jean Dunlap <lindseyburnett@gmail.com>, 'Asset Management') <=> Mentee (Logan Garza <james03@gmail.com>, 'Corporate Bank')
+INSERT INTO Meeting VALUES(71, 18, 'https://example.com/Meeting_71', 2022-02-28 21:50:08, 120); -- Mentor (Patricia Reed <jessica97@hotmail.com>, 'Private Bank') <=> Mentee (Joshua Smith <johnstonderek@hotmail.com>, 'Private Bank')
+INSERT INTO Meeting VALUES(72, 47, 'https://example.com/Meeting_72', 2022-03-27 20:52:45, 60); -- Mentor (Cole White <gregory56@gmail.com>, 'Private Bank') <=> Mentee (Michael Moreno <emily46@gmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(73, 17, 'https://example.com/Meeting_73', 2022-02-23 02:53:42, 80); -- Mentor (David Vargas <smithsarah@yahoo.com>, 'Investment Bank') <=> Mentee (Anthony Black <rreyes@gmail.com>, 'Private Bank')
+INSERT INTO Meeting VALUES(74, 44, 'https://example.com/Meeting_74', 2022-04-01 10:40:20, 60); -- Mentor (William Alvarado <hskinner@yahoo.com>, 'Private Bank') <=> Mentee (Claire Bauer <pooleaaron@yahoo.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(75, 3, 'https://example.com/Meeting_75', 2022-03-28 19:59:18, 150); -- Mentor (Jennifer Bauer <jack89@gmail.com>, 'Private Bank') <=> Mentee (Caitlin Clayton <jessicaroberts@hotmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(76, 27, 'https://example.com/Meeting_76', 2022-03-08 04:10:31, 15); -- Mentor (Jeremy Lopez <hannahgreen@hotmail.com>, 'Corporate Bank') <=> Mentee (Michael Diaz <martinandrew@yahoo.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(77, 7, 'https://example.com/Meeting_77', 2022-02-23 06:04:43, 30); -- Mentor (Brooke Martin <heatherwarner@hotmail.com>, 'Private Bank') <=> Mentee (Daniel Shepherd <ahill@gmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(78, 56, 'https://example.com/Meeting_78', 2022-03-10 23:08:50, 150); -- Mentor (John Pham <hsmith@yahoo.com>, 'Asset Management') <=> Mentee (Melinda Smith <stephaniesullivan@gmail.com>, 'Asset Management')
+INSERT INTO Meeting VALUES(79, 55, 'https://example.com/Meeting_79', 2022-03-04 09:19:52, 150); -- Mentor (Mary Brewer <lsims@yahoo.com>, 'Corporate Bank') <=> Mentee (Stephanie Warren <patriciadunn@yahoo.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(80, 5, 'https://example.com/Meeting_80', 2022-03-25 11:43:06, 30); -- Mentor (Jennifer Bauer <jack89@gmail.com>, 'Private Bank') <=> Mentee (Antonio Bishop <gloriaroberts@yahoo.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(81, 51, 'https://example.com/Meeting_81', 2022-03-02 00:29:29, 20); -- Mentor (Gabrielle Ferguson <hjones@gmail.com>, 'Corporate Bank') <=> Mentee (Julie Garcia <zsullivan@gmail.com>, 'Private Bank')
+INSERT INTO Meeting VALUES(82, 59, 'https://example.com/Meeting_82', 2022-03-28 15:20:49, 90); -- Mentor (Michael Martinez <wilsoncarolyn@hotmail.com>, 'Asset Management') <=> Mentee (Sherri White <jamesbrooks@gmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(83, 48, 'https://example.com/Meeting_83', 2022-02-28 02:59:03, 150); -- Mentor (Jerry Baker <campbelllisa@gmail.com>, 'Asset Management') <=> Mentee (Samuel Howell <qross@hotmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(84, 37, 'https://example.com/Meeting_84', 2022-02-24 16:59:10, 80); -- Mentor (Patricia Reed <jessica97@hotmail.com>, 'Private Bank') <=> Mentee (Carly Dorsey <collinlucas@hotmail.com>, 'Investment Bank')
+INSERT INTO Meeting VALUES(85, 39, 'https://example.com/Meeting_85', 2022-02-14 08:32:59, 45); -- Mentor (Richard Garcia <evelynhamilton@gmail.com>, 'Asset Management') <=> Mentee (Luis Williams <alexis83@hotmail.com>, 'Private Bank')
+INSERT INTO Meeting VALUES(86, 20, 'https://example.com/Meeting_86', 2022-02-15 08:00:42, 90); -- Mentor (Kim Spears <johnphillips@gmail.com>, 'Corporate Bank') <=> Mentee (Kyle Wells <nealleslie@hotmail.com>, 'Corporate Bank')
+INSERT INTO Meeting VALUES(87, 15, 'https://example.com/Meeting_87', 2022-03-11 11:41:36, 60); -- Mentor (Jeremy Lopez <hannahgreen@hotmail.com>, 'Corporate Bank') <=> Mentee (Ashley Davis <tcantrell@hotmail.com>, 'Asset Management')
+INSERT INTO Meeting VALUES(88, 24, 'https://example.com/Meeting_88', 2022-02-14 15:42:39, 150); -- Mentor (Michael Martinez <wilsoncarolyn@hotmail.com>, 'Asset Management') <=> Mentee (Alexis Roberts <wilsonanthony@hotmail.com>, 'Corporate Bank')
+INSERT INTO Meeting VALUES(89, 2, 'https://example.com/Meeting_89', 2022-03-27 01:58:19, 45); -- Mentor (Jennifer Bauer <jack89@gmail.com>, 'Private Bank') <=> Mentee (Cheryl Phillips <richard76@hotmail.com>, 'Corporate Bank')
+INSERT INTO Meeting VALUES(90, 42, 'https://example.com/Meeting_90', 2022-03-08 13:41:05, 90); -- Mentor (Stephanie Hicks <reidlauren@yahoo.com>, 'Private Bank') <=> Mentee (Charles Wise <mirandakim@gmail.com>, 'Private Bank')
+
+

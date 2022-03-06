@@ -1,7 +1,10 @@
+from itertools import count, islice
 import random
-from . import Account, Assignment, BusinessSector, Mentee, MenteeMessage, MenteeSkill, Mentor, MentorMessage, MentorSkill, Skill, Workshop, printe
-from .compute_bytea_hash import ComputeByteaHash
+
 from faker import Faker
+
+from . import Account, Assignment, BusinessSector, Meeting, Mentee, MenteeMessage, MenteeSkill, Mentor, MentorMessage, MentorSkill, Skill, Workshop, printe
+from .compute_bytea_hash import ComputeByteaHash
 
 FAKE: Faker = None
 
@@ -15,6 +18,25 @@ MENTOR_SKILL_SEQ = 0
 MENTEE_SKILL_SEQ = 0
 
 PASSWORD_SALT: bytes = None
+
+ASSIGNMENT_SEQ = 0
+WORKSHOP_SEQ = 0
+MEETING_SEQ = 0
+
+POSSIBLE_MEETING_WORKSHOP_TIME = [15, 20, 30, 45, 60, 80, 90, 120, 150]
+MAX_ASSIGNMENTS_PER_MENTOR = 5
+
+
+def RandomPartition(input, n):
+    division = len(input) / float(n)
+    result = []
+
+    for i in range(n):
+        i1 = int(round(division * i))
+        i2 = int(round(division * (i + 1)))
+        result.append(input[i1:i2])
+
+    return result
 
 
 # Just to make sure the generated password hashes do not pollute the Git log
@@ -60,7 +82,7 @@ def GenerateAccounts(count: int, businessSectors: list[BusinessSector]) -> list[
         accounts.append(account)
 
         if i % 10 == 0:
-            printe(f"  {i} out of {count} ...")
+            printe(f"    {i} out of {count} ...")
 
     return accounts
 
@@ -118,7 +140,7 @@ def GenerateSkills(count: int) -> list[Skill]:
     return [Skill(i, "Skill " + str(i)) for i in range(count)]
 
 
-def AllocateMentorSkills(skills: list[Skill], mentors: list[Mentor], maxSkillsPerMentor: int, minSkillsPerMentor: int = 2) -> list[MentorSkill]:
+def AllocateMentorSkills(skills: list[Skill], mentors: list[Mentor], *, maxSkillsPerMentor: int, minSkillsPerMentor: int = 2) -> list[MentorSkill]:
     global MENTOR_SKILL_SEQ
     printe(f"Generating skills for {len(mentors)} mentors with skill range from {minSkillsPerMentor} to {maxSkillsPerMentor}")
 
@@ -138,7 +160,7 @@ def AllocateMentorSkills(skills: list[Skill], mentors: list[Mentor], maxSkillsPe
     return mentorSkills
 
 
-def AllocateMenteeSkills(skills: list[Skill], mentees: list[Mentee], maxSkillsPerMentee: int, minSkillsPerMentee: int = 1) -> list[MenteeSkill]:
+def AllocateMenteeSkills(skills: list[Skill], mentees: list[Mentee], *, maxSkillsPerMentee: int, minSkillsPerMentee: int = 1) -> list[MenteeSkill]:
     global MENTEE_SKILL_SEQ
     printe(f"Generating skills for {len(mentees)} mentees with skill range from {minSkillsPerMentee} to {maxSkillsPerMentee}")
 
@@ -158,13 +180,123 @@ def AllocateMenteeSkills(skills: list[Skill], mentees: list[Mentee], maxSkillsPe
     return menteeSkills
 
 
-def GenerateAssignment(mentors: list[Mentor], mentees: list[Mentee], hasFullyAssigned: bool, hasEmpty: bool) -> list[Assignment]:
-    pass
+def GenerateAssignment(mentors: list[Mentor], mentees: list[Mentee], *, hasFullyAssigned: bool, hasEmpty: bool) -> list[Assignment]:
+    global ASSIGNMENT_SEQ
+    printe(f"Generating assignments for {len(mentors)} mentors and {len(mentees)} mentees...")
+    printe(f" -> With{'' if hasEmpty else 'out'} empty assginments")
+    printe(f" -> With{'' if hasFullyAssigned else 'out'} full assignments")
+
+    assignments = []
+
+    availableMentors = mentors.copy()
+    availableMentees = mentees.copy()
+
+    random.shuffle(availableMentors)
+    random.shuffle(availableMentees)
+
+    if hasEmpty:
+        emptyMentorsCount = random.randint(1, max(1, int(len(availableMentors) / 5)))
+        printe(f"    Preserving {emptyMentorsCount} unassigned mentors...")
+        availableMentors = availableMentors[emptyMentorsCount:]
+
+    if hasFullyAssigned:
+        fullyAssignedMentorsCount = random.randint(1, max(1, int(len(availableMentors) / 6)))
+        printe(f"    Preserving {fullyAssignedMentorsCount} fully-assigned mentors...")
+
+        fullyAssignedMentors = availableMentors[:fullyAssignedMentorsCount]
+        availableMentors = availableMentors[fullyAssignedMentorsCount:]
+
+        for mentor in fullyAssignedMentors:
+            for _ in range(MAX_ASSIGNMENTS_PER_MENTOR):
+                ASSIGNMENT_SEQ += 1
+                mentee = random.choice(availableMentees)
+                assignments.append(Assignment(ASSIGNMENT_SEQ, mentor, mentee))
+                availableMentees.remove(mentee)
+
+    # availableMentors = availableMentors * MAX_ASSIGNMENTS_PER_MENTOR
+
+    mentorApCount = dict([(m, 0) for m in availableMentors])
+
+    for mentee in availableMentees:
+        ASSIGNMENT_SEQ += 1
+
+        # Choose mentor for this mentee
+        candidateMentors = [m for (m, c) in mentorApCount.items() if c < MAX_ASSIGNMENTS_PER_MENTOR - (0 if hasFullyAssigned else 1)]
+
+        if len(candidateMentors) == 0:
+            printe(f"ERROR: Insufficient mentors.")
+            exit(1)
+
+        mentor = random.choice(candidateMentors)
+        mentorApCount[mentor] += 1
+        assignments.append(Assignment(ASSIGNMENT_SEQ, mentor, mentee))
+
+    return assignments
 
 
-def GenerateWorkshop(skills: list[Skill], count: int, past: bool = True, future: bool = True) -> list[Workshop]:
-    pass
+def GenerateWorkshop(skills: list[Skill], count: int, *, past: bool = True, future: bool = True) -> list[Workshop]:
+    global WORKSHOP_SEQ
+    printe(f"Generating {count} workshops for {len(skills)} skills...")
+    printe(f" -> With{'' if past else 'out'} past events")
+    printe(f" -> With{'' if future else 'out'} future events")
+
+    if (not past) and (not future):
+        printe("???")
+        exit(1)
+
+    pastCount = 0
+    futureCount = 0
+
+    selectedSkills = random.choices(skills, k=count)
+    workshops = []
+
+    for skill in selectedSkills:
+        WORKSHOP_SEQ += 1
+
+        isFuture = random.choice([True, False])
+
+        if isFuture:
+            futureCount += 1
+            workshopTime = FAKE.future_datetime(end_date='+30d', tzinfo=None)
+        else:
+            pastCount += 1
+            workshopTime = FAKE.past_datetime(start_date='-30d', tzinfo=None)
+
+        workshops.append(Workshop(WORKSHOP_SEQ, skill, workshopTime, random.choice(POSSIBLE_MEETING_WORKSHOP_TIME), "https://example.com/Workshop_" + str(WORKSHOP_SEQ)))
+
+    printe(f" -> Generated {pastCount} past and {futureCount} future workshops.")
+    return workshops
 
 
-def GenerateMeeing(assignments: list[Assignment], count: int, past: bool = True, future: bool = True) -> list[Assignment]:
-    pass
+def GenerateMeetings(assignments: list[Assignment], count: int, *, past: bool = True, future: bool = True) -> list[Assignment]:
+    global MEETING_SEQ
+    printe(f"Generating {count} meetings for {len(assignments)} assignments...")
+    printe(f" -> With{'' if past else 'out'} past events")
+    printe(f" -> With{'' if future else 'out'} future events")
+
+    if (not past) and (not future):
+        printe("???")
+        exit(1)
+
+    pastCount = 0
+    futureCount = 0
+
+    selectedAssignments = random.choices(assignments, k=count)
+    meetings = []
+
+    for assignment in selectedAssignments:
+        MEETING_SEQ += 1
+
+        isFuture = random.choice([True, False])
+
+        if isFuture:
+            futureCount += 1
+            meethingTime = FAKE.future_datetime(end_date='+30d', tzinfo=None)
+        else:
+            pastCount += 1
+            meethingTime = FAKE.past_datetime(start_date='-30d', tzinfo=None)
+
+        meetings.append(Meeting(MEETING_SEQ, assignment, meethingTime, random.choice(POSSIBLE_MEETING_WORKSHOP_TIME), "https://example.com/Meeting_" + str(MEETING_SEQ)))
+
+    printe(f" -> Generated {pastCount} past and {futureCount} future meetings.")
+    return meetings

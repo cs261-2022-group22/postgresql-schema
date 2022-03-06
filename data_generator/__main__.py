@@ -2,7 +2,7 @@ import random
 
 from faker import Faker
 
-from . import Account, Mentee, MenteeMessage, MenteeSkill, Mentor, MentorMessage, MentorSkill, generator as G
+from . import Account, Assignment, Meeting, Mentee, MenteeMessage, MenteeSkill, Mentor, MentorMessage, MentorSkill, Workshop, generator as G
 
 
 def GenerateSQLSection(name, list, gen_comment=None):
@@ -27,11 +27,11 @@ def comment_gen_mentee_account(m: Mentee):
     return f"Mentee ({m.account.name} <{m.account.email}>, {comment_gen_account_bs(m.account)})"
 
 
-def comment_gen_mentor_skills(m: MentorSkill):
+def comment_gen_mentor_skill(m: MentorSkill):
     return f"Skill '{m.skill.name}' for {comment_gen_mentor_account(m.mentor)}"
 
 
-def comment_gen_mentee_skills(m: MenteeSkill):
+def comment_gen_mentee_skill(m: MenteeSkill):
     return f"Skill '{m.skill.name}' for {comment_gen_mentee_account(m.mentee)}"
 
 
@@ -43,6 +43,18 @@ def comment_gen_mentee_message(m: MenteeMessage):
     return f"Message to {comment_gen_mentee_account(m.mentee)}"
 
 
+def comment_gen_assignment(a: Assignment):
+    return f"{comment_gen_mentor_account(a.mentor)} <=> {comment_gen_mentee_account(a.mentee)}"
+
+
+def comment_gen_workshop(w: Workshop):
+    return f"For skill '{w.skill.name}'"
+
+
+def comment_gen_meeting(w: Meeting):
+    return comment_gen_assignment(w.assignment)
+
+
 PURE_RANDOM = False
 
 if __name__ == "__main__":
@@ -51,6 +63,8 @@ if __name__ == "__main__":
     NUMBER_OF_MENTORS = 20
     NUMBER_OF_MENTEES = 60
     NUMBER_OF_SKILLS = 15
+    NUMBER_OF_WORKSHOPS = 40
+    NUMBER_OF_MEETINGS = 90
 
     BusinessSectors = G.GenerateBusinessSectors()
 
@@ -75,8 +89,17 @@ if __name__ == "__main__":
 
     # =========== SKILLS ===========
     Skills = G.GenerateSkills(NUMBER_OF_SKILLS)
-    MentorSkills = G.AllocateMentorSkills(Skills, Mentors, 8)
-    MenteeSkills = G.AllocateMenteeSkills(Skills, Mentees, 4, 2)
+    MentorSkills = G.AllocateMentorSkills(Skills, Mentors, maxSkillsPerMentor=8)
+    MenteeSkills = G.AllocateMenteeSkills(Skills, Mentees, maxSkillsPerMentee=4, minSkillsPerMentee=2)
+
+    # =========== Assignments ===========
+    Assignments = G.GenerateAssignment(Mentors, Mentees, hasEmpty=False, hasFullyAssigned=True)
+
+    # =========== Workshops ===========
+    Workshops = G.GenerateWorkshop(Skills, NUMBER_OF_WORKSHOPS, past=True, future=True)
+
+    # =========== Meetings ===========
+    Meetings = G.GenerateMeetings(Assignments, NUMBER_OF_MEETINGS, past=True, future=True)
 
     GenerateSQLSection("Business Sectors", BusinessSectors)
     GenerateSQLSection("Accounts", Accounts, comment_gen_account_bs)
@@ -85,7 +108,10 @@ if __name__ == "__main__":
     GenerateSQLSection("Mentees", Mentees, comment_gen_mentee_account)
     GenerateSQLSection("Mentee Messages", MenteeMessages, comment_gen_mentee_message)
     GenerateSQLSection("Skills", Skills)
-    GenerateSQLSection("Mentor Skills", MentorSkills, comment_gen_mentor_skills)
-    GenerateSQLSection("Mentee Skills", MenteeSkills, comment_gen_mentee_skills)
+    GenerateSQLSection("Mentor Skills", MentorSkills, comment_gen_mentor_skill)
+    GenerateSQLSection("Mentee Skills", MenteeSkills, comment_gen_mentee_skill)
+    GenerateSQLSection("Assignments", Assignments, comment_gen_assignment)
+    GenerateSQLSection("Workshops", Workshops, comment_gen_workshop)
+    GenerateSQLSection("Meetings", Meetings, comment_gen_meeting)
 
     pass
