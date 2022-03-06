@@ -1,9 +1,9 @@
 import bcrypt
 
 
-def ComputeByteaHash(plainPasswordStr: str):
+def ComputeByteaHash(plainPasswordStr: str, salt: str | None = None):
     passwordPlainBytes = plainPasswordStr.encode("utf-8")
-    passwordHashBytes = bcrypt.hashpw(passwordPlainBytes, bcrypt.gensalt())
+    passwordHashBytes = bcrypt.hashpw(passwordPlainBytes, bcrypt.gensalt() if salt is None else salt)
     return Rf"E'\\x{passwordHashBytes.hex()}'"
 
 
