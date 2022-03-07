@@ -19,8 +19,8 @@ CREATE TABLE WebsiteFeedback (
 DROP TABLE IF EXISTS DevelopmentFeedback CASCADE;
 CREATE TABLE DevelopmentFeedback (
   developmentFeedbackId SERIAL PRIMARY KEY,
-  content VARCHAR,
-  metric DOUBLE PRECISION
+  assignmentId INTEGER REFERENCES Assignment(assignmentId) ON DELETE CASCADE, 
+  content VARCHAR
 );
 
 DROP TABLE IF EXISTS Account CASCADE;
@@ -100,8 +100,7 @@ DROP TABLE IF EXISTS MenteeFeedback CASCADE;
 CREATE TABLE MenteeFeedback (
   menteeFeedbackId SERIAL PRIMARY KEY,
   assignmentId INTEGER REFERENCES Assignment(assignmentId) ON DELETE CASCADE,
-  rating DOUBLE PRECISION,
-  developmentFeedbackId INTEGER REFERENCES DevelopmentFeedback(developmentFeedbackId) ON DELETE CASCADE
+  rating DOUBLE PRECISION
 );
 
 DROP TABLE IF EXISTS Milestone CASCADE;
