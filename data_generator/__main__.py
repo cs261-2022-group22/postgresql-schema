@@ -62,7 +62,6 @@ def main():
 
     NUMBER_OF_MENTORS = 20
     NUMBER_OF_MENTEES = 60
-    NUMBER_OF_SKILLS = 15
     NUMBER_OF_WORKSHOPS = 40
     NUMBER_OF_MEETINGS = 40
 
@@ -88,9 +87,9 @@ def main():
     MenteeMessages = G.GenerateMenteeMessages(Mentees, MenteeMessageCount)
 
     # =========== SKILLS ===========
-    Skills = G.GenerateSkills(NUMBER_OF_SKILLS)
-    MentorSkills = G.AllocateMentorSkills(Skills, Mentors, maxSkillsPerMentor=8)
-    MenteeSkills = G.AllocateMenteeSkills(Skills, Mentees, maxSkillsPerMentee=4, minSkillsPerMentee=2)
+    Skills = G.GenerateSkills()
+    MentorSkills = G.AllocateMentorSkills(Skills, Mentors, maxSkillsPerMentor=5)
+    MenteeSkills = G.AllocateMenteeSkills(Skills, Mentees, maxSkillsPerMentee=4, minSkillsPerMentee=1)
 
     # =========== Assignments ===========
     Assignments = G.GenerateAssignment(Mentors, Mentees, hasEmpty=False, hasFullyAssigned=True)

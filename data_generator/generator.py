@@ -135,9 +135,16 @@ def GenerateMenteeMessages(mentees: list[Mentee], count: int) -> list[MenteeMess
     return messages
 
 
-def GenerateSkills(count: int) -> list[Skill]:
-    printe(f"Generating {count} skills...")
-    return [Skill(i, "Skill " + str(i)) for i in range(count)]
+def GenerateSkills() -> list[Skill]:
+    printe(f"Generating default skills...")
+
+    return [
+        Skill(1, "Technical"),
+        Skill(2, "How To Progress Career"),
+        Skill(3, "Management"),
+        Skill(4, "Leadership"),
+        Skill(5, "Healthy Work-Life balance"),
+    ]
 
 
 def AllocateMentorSkills(skills: list[Skill], mentors: list[Mentor], *, maxSkillsPerMentor: int, minSkillsPerMentor: int = 2) -> list[MentorSkill]:
