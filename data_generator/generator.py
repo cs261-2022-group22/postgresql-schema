@@ -209,7 +209,7 @@ def GenerateAssignment(mentors: list[Mentor], mentees: list[Mentee], *, hasFully
         for mentor in fullyAssignedMentors:
             for _ in range(MAX_ASSIGNMENTS_PER_MENTOR):
                 ASSIGNMENT_SEQ += 1
-                mentee = random.choice(availableMentees)
+                mentee = random.choice([m for m in availableMentees if m.account.bs.id != mentor.account.bs.id])
                 assignments.append(Assignment(ASSIGNMENT_SEQ, mentor, mentee))
                 availableMentees.remove(mentee)
 
@@ -221,7 +221,9 @@ def GenerateAssignment(mentors: list[Mentor], mentees: list[Mentee], *, hasFully
         ASSIGNMENT_SEQ += 1
 
         # Choose mentor for this mentee
-        candidateMentors = [m for (m, c) in mentorApCount.items() if c < MAX_ASSIGNMENTS_PER_MENTOR - (0 if hasFullyAssigned else 1)]
+        candidateMentors = [m for (m, c) in mentorApCount.items()
+                            if c < MAX_ASSIGNMENTS_PER_MENTOR - (0 if hasFullyAssigned else 1)
+                            and m.account.bs.id != mentee.account.bs.id]
 
         if len(candidateMentors) == 0:
             printe(f"ERROR: Insufficient mentors.")
