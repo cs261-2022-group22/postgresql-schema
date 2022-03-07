@@ -150,4 +150,4 @@ class Milestone:
         pass
 
     def __str__(self) -> str:
-        return f"INSERT INTO Milestone VALUES({self.id}, {self.mentee.id}, '{self.content}', {self.completed})"
+        return f"INSERT INTO Milestone VALUES({self.id}, {self.mentee.id}, '{self.content}', {self.completed});"
