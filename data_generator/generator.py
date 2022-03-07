@@ -3,7 +3,7 @@ import random
 
 from faker import Faker
 
-from . import Account, Assignment, BusinessSector, Meeting, Mentee, MenteeMessage, MenteeSkill, Mentor, MentorMessage, MentorSkill, Skill, Workshop, printe
+from . import Account, Assignment, BusinessSector, Meeting, Mentee, MenteeMessage, MenteeSkill, Mentor, MentorMessage, MentorSkill, Milestone, Skill, Workshop, printe
 from .compute_bytea_hash import ComputeByteaHash
 
 FAKE: Faker = None
@@ -22,6 +22,7 @@ PASSWORD_SALT: bytes = None
 ASSIGNMENT_SEQ = 0
 WORKSHOP_SEQ = 0
 MEETING_SEQ = 0
+MILESTONE_SEQ = 0
 
 POSSIBLE_MEETING_WORKSHOP_TIME = [15, 20, 30, 45, 60, 80, 90, 120, 150]
 MAX_ASSIGNMENTS_PER_MENTOR = 5
@@ -309,3 +310,19 @@ def GenerateMeetings(assignments: list[Assignment], count: int, *, past: bool = 
 
     printe(f" -> Generated {pastCount} past and {futureCount} future meetings.")
     return meetings
+
+
+def GenerateMilestones(mentees: list[Mentee], *, minPerMentee=0, maxPerMentee=15):
+    global MILESTONE_SEQ
+    printe(f"Generating milestones for {len(mentees)} mentees...")
+    printe(f" -> Ranging from {minPerMentee} to {maxPerMentee} milestones per mentee")
+
+    milestones = []
+
+    for mentee in mentees:
+        numOfMilestones = random.randrange(minPerMentee, maxPerMentee)
+        for i in range(numOfMilestones):
+            MILESTONE_SEQ += 1
+            milestones.append(Milestone(MILESTONE_SEQ, mentee, f"Milestone #{i+1} for {mentee.account.name}", random.choice([True, False])))
+
+    return milestones

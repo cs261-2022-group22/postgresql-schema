@@ -139,3 +139,15 @@ class MenteeSkill:
 
     def __str__(self) -> str:
         return f"INSERT INTO MenteeSkill VALUES({self.id}, {self.mentee.id}, {self.skill.id});"
+
+
+class Milestone:
+    def __init__(self, _id: int, _mentee: Mentee, _content: str, _completed: bool) -> None:
+        self.id = _id
+        self.mentee = _mentee
+        self.content = _content
+        self.completed = _completed
+        pass
+
+    def __str__(self) -> str:
+        return f"INSERT INTO Milestone VALUES({self.id}, {self.mentee.id}, '{self.content}', {self.completed})"
