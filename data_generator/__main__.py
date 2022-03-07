@@ -100,6 +100,9 @@ def main():
     # =========== Meetings ===========
     Meetings = G.GenerateMeetings(Assignments, NUMBER_OF_MEETINGS, past=True, future=True)
 
+    # =========== Milestones ===========
+    Milestones = G.GenerateMilestones(Mentees)
+
     Mentees[0].account.passwordHash = R"E'\\x243262243132245159367569413552717a613166754f4b533478524c4f5041724a33645270774970376f334e703671324f44524c4859424256755632'"
     Mentees[0].account.email = "test-mentee@gmail.com"
     Mentees[0].account.name = "Test Mentee Account"
@@ -120,6 +123,7 @@ def main():
     GenerateSQLSection("Assignments", Assignments, comment_gen_assignment)
     GenerateSQLSection("Workshops", Workshops, comment_gen_workshop)
     GenerateSQLSection("Meetings", Meetings, comment_gen_meeting)
+    GenerateSQLSection("Milestones", Milestones)
 
     pass
 
