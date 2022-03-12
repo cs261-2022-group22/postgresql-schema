@@ -16,13 +16,6 @@ CREATE TABLE WebsiteFeedback (
   message VARCHAR
 );
 
-DROP TABLE IF EXISTS DevelopmentFeedback CASCADE;
-CREATE TABLE DevelopmentFeedback (
-  developmentFeedbackId SERIAL PRIMARY KEY,
-  assignmentId INTEGER REFERENCES Assignment(assignmentId) ON DELETE CASCADE, 
-  content VARCHAR
-);
-
 DROP TABLE IF EXISTS Account CASCADE;
 CREATE TABLE Account (
   accountId SERIAL PRIMARY KEY,
@@ -64,6 +57,13 @@ CREATE TABLE Assignment (
   assignmentId SERIAL PRIMARY KEY,
   mentorId INTEGER REFERENCES Mentor(mentorId) ON DELETE CASCADE,
   menteeId INTEGER REFERENCES Mentee(menteeId) ON DELETE CASCADE
+);
+
+DROP TABLE IF EXISTS DevelopmentFeedback CASCADE;
+CREATE TABLE DevelopmentFeedback (
+  developmentFeedbackId SERIAL PRIMARY KEY,
+  assignmentId INTEGER REFERENCES Assignment(assignmentId) ON DELETE CASCADE,
+  content VARCHAR
 );
 
 DROP TABLE IF EXISTS Meeting CASCADE;
