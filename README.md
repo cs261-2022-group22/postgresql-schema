@@ -21,17 +21,17 @@ Delete all data from every table in the database. This process also resets the i
 > ## Once this PR is merged, the following data will be written into DB:
 > * 20 Randomly generated mentors
 > * 60 Randomly generated mentees (None of them has a dual profile, i.e. they're either a mentor or a mentee)
-> * 15 Skills, namely `Skill #x`
+> * 5 Default Skills
 > * 40 Randomly generated workshops, (**both in the past and in the future**)
 > * 40 Randomly generated meetings. (**both in the past and in the future**)
 > * 68 Randomly generated mentor messages
 > * 92 Randomly generated mentee messages
-> * 87 Randomly generated mentor skills
-> * 150 Randomly generated mentee skills
+> * 55 Randomly generated mentor skills
+> * 121 Randomly generated mentee skills
 > * 60 Assignments (that's for all existing mentees), with:
 >   
->   * one mentor, `Jennifer Bauer <jack89@gmail.com>` is fully assigned, and
->   * one mentor, `Alexis Monroe <alexanderfrances@yahoo.com>` has zero assignments
+>   * one mentor, `Timothy Figueroa <johnsonmichaela@hotmail.com>`, is fully assigned, and
+>   * one mentor, `James Johnson <briansnyder@gmail.com>`, has zero assignments
 > 
 > ## Emails and Passwords
 > The **emails are the passwords**, except:
